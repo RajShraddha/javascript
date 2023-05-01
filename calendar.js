@@ -15,7 +15,7 @@ function selectedMonth(){
 // let weekRow = document.createElement('tr')
 // weekRow.id = 'weekRow'
 function displayDates(){
-    deleteCurrentCalendarRow();
+    updateCalendarRows();
     
     const todayDate = new Date ()
     const thisYear = todayDate.getFullYear()
@@ -67,16 +67,7 @@ function displayDates(){
     }
 }
 
-// const createCalendarRows = ()=>{
-//     deleteCurrentCalendarRow();
-
-//     return document.createElement('tr');
-// }
-function deleteCurrentCalendarRow(){
+function updateCalendarRows(){
     let calendarRows = document.getElementById('calendarRows')
-    let weekNodes = calendarRows.querySelectorAll('#weekRow')
-    console.log(weekNodes);
-    // for(week in weekNodes){
-    //     calendarRows.children[0].remove()
-    // }
+    calendarRows.innerHTML = ''    
 }
