@@ -1,12 +1,49 @@
 <html>
-<head>
-<script src="index.js"></script>
-<title>Hola!</title>
-</head>
+    <head>
+    <!-- <script defer src="index.js"></script> -->
+    <script defer src="calendar.js"></script>
+    <title>Calendar</title>
+    </head>
 
-<body>
-<main>
-<h1 onclick = letDisplay()> display </h1>
-</main>
-</body>
+    <body>
+        <main>
+            <!-- <h1 onclick = letDisplay()> display </h1> -->
+            <h1 style="text-align: center;" onclick = displayCalendar() >Display Calendar</h1>
+            <div style="text-align: center; border: 3px solid grey; border-radius: 4px; display: none;" id = "calendarBox">
+                <span>
+                    <label>Select Month</label>
+                    <select id = 'dropdown' onchange=displayDates()>
+                        <option id ='option0', value = 'Select Month'>Select Month</option>
+                        <option id ='option1' value = 'January'>January</option>
+                        <option id ='option2' value = 'February'>February</option>
+                        <option id ='option3' value = 'March'>March</option>
+                        <option id ='option4' value = 'April'>April</option>
+                        <option id ='option5' value = 'May'>May</option>
+                        <option id ='option6' value = 'June'>June</option>
+                        <option id ='option7' value = 'July'>July</option>
+                        <option id ='option8' value = 'August'>August</option>
+                        <option id ='option9' value = 'September'>September</option>
+                        <option id ='option10' value = 'October'>October</option>
+                        <option id ='option11' value = 'November'>November</option>
+                        <option id ='option12' value = 'December'>December</option>
+                    </select>
+                </span>
+
+                <section >
+                    <table align="center">
+                        <theader>
+                            <td>Sun</td>
+                                <td>Mon</td>
+                                <td>Tue</td>
+                                <td>Wed</td>
+                                <td>Thurs</td>
+                                <td>Fri</td>
+                                <td>Sat</td>
+                        </theader>
+                        <tbody id = 'calendarRows'></tbody>
+                    </table>
+                </section>
+            </div>
+        </main>
+    </body>
 </html>
